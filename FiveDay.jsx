@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import { Container, Card, Typography} from '@mui/material';
-import CardContent from '@mui/material';
+import { Container, Card, Typography, CardContent} from '@mui/material'
+import Grid from '@mui/material';
+
+// the above line is commented out because it breaks the whole app. 
 
 export const FiveDay = () => {
 // api call goes here. 
@@ -14,15 +16,29 @@ export const FiveDay = () => {
         .catch((error) => console.error("Error fetching data:", error));
     }, []);
     // dont know if this is the best way to do it ths is just an example. 
-
+{
+  /* data.daily[i]temp.day????? data.daily[i].weather[0].icon data.daily[i].wind_speed */
+}
   return (
     
     <>
     <Container>
         <Card sx={{ minWidth:275 }}>
             <CardContent>
-                <Typography>  </Typography>
-                {/* data.daily[i]temp.day????? data.daily[i].weather[0].icon data.daily[i].wind_speed */}
+                <Typography> Monday </Typography>
+                <Grid>
+                    <Grid item >
+                        {/* cant figure out how to actually space them the site keeps breaking.  */}
+
+                    </Grid>
+
+
+                </Grid>
+
+                <Typography>temp</Typography>
+                <Typography>weather</Typography>
+                <Typography>wind speed</Typography>
+                <Typography>humidity</Typography>
             </CardContent>
 
         </Card>

@@ -23,7 +23,7 @@ export const FiveDay = () => {
       <Container>
         {/* grid tag below houses all of the 5 day cards will now add grid spacing. */}
         {/* each card is set to grid spacing 2 then will leave enogh space for all 5 cards to fit on one row.  */}
-        <Grid container>
+        <Grid container spacing ={35}>
           <Grid item xs={2}>
             <Card sx={{ minWidth: 275 }}>
               <CardContent>
